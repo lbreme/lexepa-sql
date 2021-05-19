@@ -25,7 +25,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function begin_insert( $begin_offset )
 	{
-		echo 'Offset of the SQL INSERT query: ' . $begin_offset;
+		echo 'Offset of the SQL INSERT query: ' . $begin_offset . '&lt;br /&gt;';
 	}
 
 	/**
@@ -36,7 +36,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function table_name( $table_name, $offset )
 	{
-		echo 'Table name: ' . $table_name;
+		echo 'Table name: ' . $table_name . '&lt;br /&gt;';
 	}
 
 	/**
@@ -47,7 +47,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function field_name( $field_name, $offset )
 	{
-		echo 'Field name: ' . $field_name;
+		echo 'Field name: ' . $field_name . '&lt;br /&gt;';
 	}
 
 	/**
@@ -58,7 +58,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function field_value( $field_value, $offset )
 	{
-		echo 'Field value: ' . $field_value;
+		echo 'Field value: ' . $field_value . '&lt;br /&gt;';
 	}
 
 	/**
@@ -68,7 +68,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function end_insert( $end_offset )
 	{
-		echo 'Offset of the end of the SQL INSERT query: ' . $end_offset;
+		echo 'Offset of the end of the SQL INSERT query: ' . $end_offset . '&lt;br /&gt;';
 	}
 
 	/**
@@ -78,7 +78,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function end_parsing( $offset )
 	{
-		echo 'Offset of the end of the file parsing: ' . $end_offset;
+		echo 'Offset of the end of the file parsing: ' . $end_offset . '&lt;br /&gt;';
 	}
 
 	/**
@@ -88,7 +88,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function set_error( $error )
 	{
-		echo $error;
+		echo $error . '&lt;br /&gt;';
 	}
 }
 
