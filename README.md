@@ -78,7 +78,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function end_parsing( $offset )
 	{
-		echo 'Offset of the end of the file parsing: ' . $end_offset . '&lt;br /&gt;';
+		echo 'Offset of the end of the file parsing: ' . $offset . '&lt;br /&gt;';
 	}
 
 	/**
