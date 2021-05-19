@@ -10,11 +10,11 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	/**
 	 * Begin of the SQL INSERT query.
 	 *
-	 * @param int    $begin_offset Offset of the SQL INSERT query.
+	 * @param int $begin_offset Offset of the begin of the SQL INSERT query.
 	 */
 	public function begin_insert( $begin_offset )
 	{
-		echo 'Offset of the SQL INSERT query: ' . $begin_offset . '<br />';
+		echo 'Offset of the begin of the SQL INSERT query: ' . $begin_offset . '<br />';
 	}
 
 	/**
@@ -67,7 +67,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function end_parsing( $offset )
 	{
-		echo 'Offset of the end of the file parsing: ' . $end_offset . '<br />';
+		echo 'Offset of the end of the file parsing: ' . $offset . '<br />';
 	}
 
 	/**

@@ -13,7 +13,7 @@ interface Lexepa_Sql_Interface
 	/**
 	 * Begin of the SQL INSERT query.
 	 *
-	 * @param int    $begin_offset Offset of the SQL INSERT query.
+	 * @param int $begin_offset Offset of the begin of the SQL INSERT query.
 	 */
 	public function begin_insert( $begin_offset );
 
