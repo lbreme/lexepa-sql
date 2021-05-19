@@ -1,5 +1,7 @@
 <?php
 
+namespace Breme\Lexepa\Sql;
+
 /**
  * Lexepa Interface.
  *
