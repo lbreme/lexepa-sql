@@ -1,0 +1,21 @@
+{
+	"name": "lbreme/lexepa-sql",
+	"type": "library",
+	"description": "Library for lexing and parsing a SQL INSERT statement",
+	"keywords": ["lexer","parser","insert","sql"],
+	"homepage": "https://github.com/lbreme/lexepa-sql",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Lorenzo Breme",
+			"email": "lbreme@tiscali.it",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=7.0.0"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	}
+}
