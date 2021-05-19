@@ -7,7 +7,7 @@ Library for lexing and parsing a SQL INSERT query.
 <pre>composer require lbreme/lexepa-sql</pre>
 
 <h1>How does it work?</h1>
-<p>The Lexepa-Sql library analyzes any text string coming from the result of a serialization in PHP. During the analysis a series of callback functions are called to which are passed as arguments the elements that constitute the serialized string.</p>
+<p>The Lexepa-Sql library analyzes any file that contains one or more INSERT SQL queries. During the analysis a series of callback functions are called to which the elements that constitute the query are passed as arguments.</p>
 
 <p>We clarify with an example, which is contained in the file <a href="https://github.com/lbreme/lexepa-sql/blob/main/class-example-sql.php">class-example-sql.php</a>, which to make it work is to copy in the root of your project:</p>
 
@@ -25,7 +25,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function begin_insert( $begin_offset )
 	{
-		echo 'Offset of the SQL INSERT query: ' . $begin_offset . '<br />';
+		echo 'Offset of the SQL INSERT query: ' . $begin_offset;
 	}
 
 	/**
@@ -36,7 +36,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function table_name( $table_name, $offset )
 	{
-		echo 'Table name: ' . $table_name . '<br />';
+		echo 'Table name: ' . $table_name;
 	}
 
 	/**
@@ -47,7 +47,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function field_name( $field_name, $offset )
 	{
-		echo 'Field name: ' . $field_name . '<br />';
+		echo 'Field name: ' . $field_name;
 	}
 
 	/**
@@ -58,7 +58,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function field_value( $field_value, $offset )
 	{
-		echo 'Field value: ' . $field_value . '<br />';
+		echo 'Field value: ' . $field_value;
 	}
 
 	/**
@@ -68,7 +68,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function end_insert( $end_offset )
 	{
-		echo 'Offset of the end of the SQL INSERT query: ' . $end_offset . '<br />';
+		echo 'Offset of the end of the SQL INSERT query: ' . $end_offset;
 	}
 
 	/**
@@ -78,7 +78,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function end_parsing( $offset )
 	{
-		echo 'Offset of the end of the file parsing: ' . $end_offset . '<br />';
+		echo 'Offset of the end of the file parsing: ' . $end_offset;
 	}
 
 	/**
@@ -88,7 +88,7 @@ class Example_Sql extends Lexepa_Sql_Abstract
 	 */
 	public function set_error( $error )
 	{
-		echo $error . '<br />';
+		echo $error;
 	}
 }
 
