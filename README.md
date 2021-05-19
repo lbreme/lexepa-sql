@@ -9,7 +9,7 @@ Library for lexing and parsing a SQL INSERT query.
 <h1>How does it work?</h1>
 <p>The Lexepa-Sql library analyzes any file that contains one or more INSERT SQL queries. During the analysis a series of callback functions are called to which the elements that constitute the query are passed as arguments.</p>
 
-<p>We clarify with an example, which is contained in the file <a href="https://github.com/lbreme/lexepa-sql/blob/main/class-example-sql.php">class-example-sql.php</a>, which to make it work is to copy in the root of your project:</p>
+<p>Let's clarify with an example, which is contained in the file <a href="https://github.com/lbreme/lexepa-sql/blob/main/class-example-sql.php">class-example-sql.php</a>, which to make it work is to copy in the root of your project, along with the test file <a href="https://github.com/lbreme/lexepa-sql/blob/main/insert.sql">insert.sql</a>:</p>
 
 <pre>
 /*
@@ -108,7 +108,53 @@ $lexepa_sql->parse_sql();
 <p>The result of this example is as follows:</p>
 
 <pre>
-
+Offset of the begin of the SQL INSERT query: 0
+Table name: wp_options
+Field value: 1
+Field value: siteurl
+Field value: https://www.mysite.com/
+Field value: yes
+Field value: 2
+Field value: home
+Field value: https://www.mysite.com/
+Field value: yes
+Field value: 3
+Field value: blogname
+Field value: My site
+Field value: yes
+Field value: 4
+Field value: blogdescription
+Field value: My revised site
+Field value: yes
+Offset of the end of the SQL INSERT query: 206
+Offset of the begin of the SQL INSERT query: 208
+Table name: wp_postmeta
+Field value: 71
+Field value: 33
+Field value: _edit_last
+Field value: 1
+Field value: 72
+Field value: 33
+Field value: adventurous-header-image
+Field value: default
+Field value: 73
+Field value: 33
+Field value: adventurous-sidebarlayout
+Field value: default
+Field value: 74
+Field value: 33
+Field value: adventurous-featured-image
+Field value: default
+Field value: 75
+Field value: 33
+Field value: _edit_lock
+Field value: 1600100291:1
+Field value: 76
+Field value: 35
+Field value: _edit_last
+Field value: 1
+Offset of the end of the SQL INSERT query: 489
+Offset of the end of the file parsing: 491
 </pre>
 
 <p>The callback functions implemented by the Lexepa_Sql_Abstract class are contained and documented in the interface file <a href="https://github.com/lbreme/lexepa-sql/blob/main/src/class-lexepa-sql-interface.php">class-lexepa-sql-interface.php</a></p>
